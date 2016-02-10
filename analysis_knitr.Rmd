@@ -134,16 +134,19 @@ dat.tidy <- dcast( dat.tidy, subject + activity ~ variable, mean )
 
 A little dense to print out, but comparing dimensions with the 'dat.clean' table shows the change.
 
-```{r,echo=TRUE}
+```{r,echo=TRUE,results='hold'}
 dim(dat.clean)
 dim(dat.tidy)
 ```
 
-The end result is an averaged table where each combination of independent variables is a unique one.  Both smaller in volume and more meaningful.  To finish, the tidied data table is stored as a csv file.
+The end result is an averaged table where each combination of independent variables is a unique one.  Both smaller in volume and more meaningful.  To finish, the tidied data table is stored as a csv file, and a txt file.
 
 ```{r,echo=TRUE,results='hide'}
 file.create("tidy.csv")
 write.csv(dat.tidy, file="tidy.csv")
+# For Coursera submission
+file.create("tidy.txt")
+write.table(dat.tidy, file="tidy.txt",row.name=FALSE)
 ```
 
 ####Version info:

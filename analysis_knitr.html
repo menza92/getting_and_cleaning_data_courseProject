@@ -158,13 +158,16 @@ dat.tidy</code></pre>
 <p>It’s easy to see that the next step will be to actually average for common id variables and measurement type. ‘dcast()’ from the ‘data.table’ package makes this very easy.</p>
 <pre class="r"><code>dat.tidy &lt;- dcast( dat.tidy, subject + activity ~ variable, mean )</code></pre>
 <p>A little dense to print out, but comparing dimensions with the ‘dat.clean’ table shows the change.</p>
-<pre class="r"><code>dim(dat.clean)</code></pre>
-<pre><code>## [1] 10299    68</code></pre>
-<pre class="r"><code>dim(dat.tidy)</code></pre>
-<pre><code>## [1] 180  68</code></pre>
-<p>The end result is an averaged table where each combination of independent variables is a unique one. Both smaller in volume and more meaningful. To finish, the tidied data table is stored as a csv file.</p>
+<pre class="r"><code>dim(dat.clean)
+dim(dat.tidy)</code></pre>
+<pre><code>## [1] 10299    68
+## [1] 180  68</code></pre>
+<p>The end result is an averaged table where each combination of independent variables is a unique one. Both smaller in volume and more meaningful. To finish, the tidied data table is stored as a csv file, and a txt file.</p>
 <pre class="r"><code>file.create(&quot;tidy.csv&quot;)
-write.csv(dat.tidy, file=&quot;tidy.csv&quot;)</code></pre>
+write.csv(dat.tidy, file=&quot;tidy.csv&quot;)
+# For Coursera submission
+file.create(&quot;tidy.txt&quot;)
+write.table(dat.tidy, file=&quot;tidy.txt&quot;,row.name=FALSE)</code></pre>
 <div id="version-info" class="section level4">
 <h4>Version info:</h4>
 <div id="r-3.2.3" class="section level5">

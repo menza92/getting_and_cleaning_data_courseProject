@@ -68,7 +68,9 @@ dat.tidy <- dcast( dat.tidy, subject + activity ~ variable, mean )
 file.create("tidy.csv")
 write.csv(dat.tidy, file="tidy.csv")
 
-
+# Write tidied data to a txt file (for Coursera submission)
+file.create("tidy.txt")
+write.table(dat.tidy, file="tidy.txt",row.name=FALSE)
 
 
 

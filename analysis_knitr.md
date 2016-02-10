@@ -166,26 +166,23 @@ A little dense to print out, but comparing dimensions with the 'dat.clean' table
 
 ```r
 dim(dat.clean)
-```
-
-```
-## [1] 10299    68
-```
-
-```r
 dim(dat.tidy)
 ```
 
 ```
+## [1] 10299    68
 ## [1] 180  68
 ```
 
-The end result is an averaged table where each combination of independent variables is a unique one.  Both smaller in volume and more meaningful.  To finish, the tidied data table is stored as a csv file.
+The end result is an averaged table where each combination of independent variables is a unique one.  Both smaller in volume and more meaningful.  To finish, the tidied data table is stored as a csv file, and a txt file.
 
 
 ```r
 file.create("tidy.csv")
 write.csv(dat.tidy, file="tidy.csv")
+# For Coursera submission
+file.create("tidy.txt")
+write.table(dat.tidy, file="tidy.txt",row.name=FALSE)
 ```
 
 ####Version info:
