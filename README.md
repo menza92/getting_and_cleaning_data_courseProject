@@ -5,7 +5,7 @@ Simply put, this repository contains raw data, tidied data, and the R files used
 The data in question is of accelerometer/gyroscope data from the Samsung Galaxy S smartphone of 30 test subjects 
 as they performed different physical activites.  
 
-##Files
+###Files
 **codeBook.html** Code book for the tidied data, describing each variable.
 
 **codeBook.md** markdown file to compile the html code book (visible @ github).
@@ -22,5 +22,5 @@ as they performed different physical activites.
 
 **analysis_knitr.Rmd** The source file for analysis_knitr, compiled using the knitr package.
 
-##Version Info.
+###Version Info.
 R 3.2.3, data.table_1.9.6
