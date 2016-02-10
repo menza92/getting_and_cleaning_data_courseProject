@@ -14,6 +14,8 @@ as they performed different physical activites.
 
 **tidy.csv** Tidied data.
 
+**tidy.txt** Tidied data (for Coursera submission)
+
 **getdata_projectfiles_UCI HAR Dataset.zip** Raw data.
 
 **analysis_knitr.html** High detail and more readable step by step documentation of the data processing.
